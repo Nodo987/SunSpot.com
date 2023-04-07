@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>SunSpot</title>
+</head>
+<body>
+    
+    
+    <section class="Full_content_container "> <!--there is stored every other elements-->
+        
+        <div class="Project_container "><!--There is Parent Container for every app element, NOT BACKGROUND IMAGES-->
+           
+            <div class="container_for_sections hiden"><!--container of the English language version -->
+
+                <header class="Header "><!--There start Header-->
+                
+                    <img src="./images/icons/plus.png" alt="Add_City_Icon" class="Header_Img"><!--Add City function icon-->
+                    
+                    <p>SunSpot</p><!--Name of the App-->
+                                
+                    <img src="./images/icons/setting-lines.png" alt="Setting_Icon" class="Header_Img"><!--App Settings Icon-->
+            
+                </header>
+                <p class="error_alert">There is a problem! Please check the specified data and internet connection</p>
+                <main class="Show_this_moment_stats"><!--In tis div is stored All stat Elementss-->
+
+                    <p class="City_name_Placeholder"></p> <!--Placeholder for choosed city name-->
+
+                    <p class="Date_text_Placeholder Small_font_for_stats"></p><!--Placeholder for date -->
+
+                    <p class="Temperature_text_Placeholder"></p><!--Placeholder for This Moment Temperature-->
+
+                    <p class="Weahther_type_text_Placeholder Small_font_for_stats">Weather: <span></span> </p><!--This variable Showes what type of weather is now-->
+                
+                    <div class="humidity_and_wind_speed_stats_container">
+
+                        <p class="Humidity_amount_text_placeholder Small_font_for_stats ">Humidity: <span></span> </p><!--This variable Showes humidity amount-->
+                        <p class="Wind_Speed_amount_text_placeholder Small_font_for_stats ">Wind Speed: <span></span></p> <!--This variable showes wind speed amount-->
+                    
+                </div>
+                
+
+            </main>
+
+
+
+            </div>
+
+            <div class="container_for_sections "><!--container of the Georgian language version -->
+
+                <header class="Header"><!--There start Header-->
+                
+                    <img src="./images/icons/plus.png" alt="Add_City_Icon" class="Header_Img"><!--Add City function icon-->
+                    
+                    <p>SunSpot</p><!--Name of the App-->
+                                
+                    <img src="./images/icons/setting-lines.png" alt="Setting_Icon" class="Header_Img"><!--App Settings Icon-->
+            
+                </header>
+                <p class="error_alert">რაღაც პრობლემაა! გთხოვთ გადაამოწმეთ მითითებული მონაცემები და ინტერნეტთან კავშირი</p>
+                <main class="Show_this_moment_stats"><!--In tis div is stored All stat Elementss-->
+
+                    <p class="City_name_Placeholder"></p> <!--Placeholder for choosed city name-->
+
+                    <p class="Date_text_Placeholder Small_font_for_stats"></p><!--Placeholder for date -->
+
+                    <p class="Temperature_text_Placeholder"></p><!--Placeholder for This Moment Temperature-->
+
+                    <p class="Weahther_type_text_Placeholder Small_font_for_stats">ამინდი: <span ></span> </p><!--This variable Showes what type of weather is now-->
+                
+                    <div class="humidity_and_wind_speed_stats_container">
+
+                        <p class="Humidity_amount_text_placeholder Small_font_for_stats ">ტენიანობა: <span ></span> </p><!--This variable Showes humidity amount-->
+                        <p class="Wind_Speed_amount_text_placeholder Small_font_for_stats ">ქარის სიჩქარე: <span ></span></p> <!--This variable showes wind speed amount-->
+                    
+                </div>
+
+            </main>
+
+            </div>
+
+            <div class="container_for_sections  hiden "><!--container of the search section-->
+
+                <p class="Back_to_main_section_button">&#8592;</p><!--button to back main section-->
+                
+                <div class="search_bar_container"><!--container of the search input and search icon-->
+                    
+                    <input type="text" class="search_bar" placeholder="Search City"><!--search input-->
+                    
+                    <img src="./images/icons/search_icon.png" class="search_icon"><!--search icon-->
+               
+                </div>
+                
+                <div id="City_list" class="city_list"></div><!--container of the city list which comes from json-->
+                
+            </div>
+
+            <div class="container_for_sections  hiden "><!--Container of the setting section-->
+                
+                <p class="Back_to_main_section_button change_top_propertie">&#8592;</p><!--button to back main section-->
+
+                <div class="Choose_language_container hiden">
+                    <p class="Choose_language">Choose Language</p>
+
+                    <div class="Choose_language_options_container">
+                        <button value="Geo" class="option">Georgian</button>
+                        <button value="Eng" class="option">English</button>
+                    </div>
+
+                </div>
+
+                <div class="Choose_language_container">
+                    <p class="Choose_language">აირჩიე ენა</p>
+
+                    <div class="Choose_language_options_container">
+                        <button value="Geo" class="option">ქართული</button>
+                        <button value="Eng" class="option">ინგლისური</button>
+                    </div>
+                   
+                </div>
+
+            </div>
+        </div>
+   
+    </section>
+
+    <script src="./script.js"></script>
+
+</body>
+</html>

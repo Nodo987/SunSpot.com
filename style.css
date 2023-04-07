@@ -1,0 +1,366 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: #fff;
+}
+
+.Full_content_container{ /*Style of Full content container*/
+    width: 100%;
+    height: 100%;
+    display: grid;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+    z-index: 0;
+    overflow: hidden;
+}
+
+.Full_content_container::after{/*adding white shade on the background image*/
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-color: #ffffff3b;
+    z-index: 0;
+}
+
+.Project_container{/* Styles of The Project Container*/
+    width: 500px;
+    height: 100%;
+    max-height: 800px;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 1;
+    border-radius: 15px;
+    box-shadow: 0 0 15px #0000008e;
+    position: relative;
+}
+
+.Project_container::before{
+    content: '';
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.685);
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+}
+
+
+
+/*todo Start of the header */
+
+
+.Header{ /* Styles of The Header Section*/
+    width: 100%;
+    height: 50px;
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: 2px;
+}
+
+.Header_Img{/* Style for header images*/
+    width: 20px;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(103%) contrast(102%);
+    cursor: pointer;
+}
+
+
+/*todo End of the header*/
+
+
+
+/*todo Start of the main stats Container Styling*/
+
+.Show_this_moment_stats{ /*Stats container Style Properties*/
+
+    width: 100%;
+    height: 50%;
+    display: grid;
+    grid-template-rows: 20% 10% 30% 10% 10% 10%;
+    justify-items: center;
+    align-items: center;
+    gap: 35px;
+    margin-top: 17%;
+}
+
+.City_name_Placeholder{ /*City name style properties*/
+    font-size: 3rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+
+.Temperature_text_Placeholder{/*temperature stat text style properties*/
+    font-size: 6rem;
+    letter-spacing: 2px;
+    font-weight: bold;
+    border-bottom: 3px dashed #fff;;
+}
+
+.humidity_and_wind_speed_stats_container{/*Humidity and wind speed stats container style properties*/
+    width: auto;
+    margin: auto;
+    display: grid;
+    grid-template-columns:  repeat(2, 1fr);
+    justify-items:center;
+}
+
+.Small_font_for_stats{/*every small font style in main part*/
+    font-size: 1.4rem;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+
+}
+
+.Small_font_for_stats span{/*every small font span style in main part*/
+    font-size: 1.1rem;
+    font-weight: 400;
+    font-style: italic;
+}
+
+
+
+
+
+/*todo styling of the search section*/
+
+.Back_to_main_section_button{/*style of the button which after clicking bring you back to main section*/
+    position: absolute;
+    font-size: 1.5rem;
+    top: -40px;
+    left: 15px;
+    cursor: pointer;
+    color: #fff;
+}
+
+.search_bar_container{/*styling of the search input and search icon container*/
+    width: 100%;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search_bar{/*styling of the search bar input*/
+    width: 80%;
+    height: 30px;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    background-color: #4e4e4e;
+    color: #fff;
+    font-size: 1.05rem;
+    letter-spacing: 2px;
+    padding-left: 50px;
+    border-radius: 25px;
+}
+
+.search_icon{/*styling of the search icon image*/
+    width: 25px;
+    padding: 2.5px;
+    cursor: pointer;
+    filter: invert(100%) sepia(0%) saturate(0%) hue-rotate(317deg) brightness(103%) contrast(102%);
+}
+
+.city_list{/*styling of the parentElement of all city list*/
+    width: 95%;
+    height: 100%;
+    max-height: 200px;
+    transform: translateY(10px);
+    margin: auto;
+    overflow-y: scroll;
+    border-radius: 15px 0 0 15px;
+}
+
+.city_list_individual_container{/*styling of the all city list individual element*/
+    height: 50px;
+    background-color: #252525af;
+    padding: 5px;
+    border-bottom: 1px solid #ffffff9d;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    color: #fff;
+    letter-spacing: 2px;
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.city_list_individual_container:hover{/*styling of the all city list individual element hover*/
+    background-color: #111111af;
+}
+
+::-webkit-scrollbar {/*scrollbar width*/
+    width: 5px;
+  }
+  
+  ::-webkit-scrollbar-track {/*scrollbar background color*/
+    background: #333333;
+  }
+
+  ::-webkit-scrollbar-thumb {/*scrollbar thumb color*/
+    background: #fff;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {/*scrollbar thumb color hover*/
+    background: #fff;;
+  }
+
+
+/*todo styling of the settings section*/
+.Choose_language_container{
+    width: 100%;
+    height: 100%;
+    transform: translate(15px, 100px);
+    gap: 15px;
+}
+
+.Choose_language{
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.Choose_language_options_container{
+    width: 100%;
+    height: 30px;
+    outline: none;
+    border: none;
+    color: #fff;
+    transform: translateY(5px);
+    display: flex;
+    gap: 10px;
+
+}
+
+.option{
+    width: 30%;
+    height: 30px;
+    background-color: #4e4e4e;
+    outline: none;
+    border: none;
+    color: #fff;
+    transform: translateY(15px);
+    cursor: pointer;
+}
+
+/*Todo error alerts*/
+.error_alert{
+    display: none;
+    position: absolute;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 3rem;
+}
+
+
+/*todo Clases for Change style based on Weather*/
+
+.Weather_rain_background_image{ /*Applyes rain background image on div*/
+    background-image: url(./images/wallpapers/Rain_Background_Wallpaper.jpg);
+}
+
+.Weather_snow_background_image{ /*Applyes snow background image on div*/
+    background-image: url(./images/wallpapers/Snow_Background_Walppaper.jpg);
+}
+
+.Weather_cloud_background_image{ /*Applyes cloud background image on div*/
+    background-image: url(./images/wallpapers/Cloud_Background_Wallpaper.jpg);
+}
+
+.Weather_clear_background_image{ /*Applyes clear background image on div*/
+    background-image: url(./images/wallpapers/Clear_Background_Wallpaper.jpg);
+}
+
+.Weather_thunder_background_image{ /*Applyes clear background image on div*/
+    background-image: url(./images/wallpapers/Thunder_Background_wallpaper.jpg);
+}
+
+.Weather_drizzle_background_image{ /*Applyes clear background image on div*/
+    background-image: url(./images/wallpapers/drizzle_background_wallpaper.jpg);
+}
+
+.Weather_fog_background_image{ /*Applyes clear background image on div*/
+    background-image: url(./images/wallpapers/fog_background_wallpaper.jpg);
+}
+
+.Weather_tornado_background_image{ /*Applyes clear background image on div*/
+    background-image: url(./images/wallpapers/tornado_background_wallpaper.jpg);
+}
+
+.container_for_sections{/*Get all the content top*/
+    width: 100%;
+    height: 100%;
+    position: relative;
+    z-index: 5;
+}
+
+.hiden{/*turns onn display off on the div*/
+    display: none;
+}
+.change_top_propertie{
+    top: 10px;
+}
+
+
+
+@media only screen and (max-width: 500px){
+    .Project_container{
+        width: 100%;
+        height: 100%;
+        max-height: unset;
+        border-radius:unset;
+    }
+    .Project_container::before{
+        border-radius: 0;
+    }
+    .Small_font_for_stats{/*every small font style in main part*/
+        font-size: 1.2em;
+        font-weight: bold;
+        letter-spacing: 0.5px;
+    
+    }
+    .Small_font_for_stats span{/*every small font span style in main part*/
+        font-size: 0.9rem;
+        font-weight: 400;
+        font-style: italic;
+    }
+    .humidity_and_wind_speed_stats_container{
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        text-align: center;
+        gap: 10px;
+    }
+    .city_list_individual_container{/*styling of the all city list individual element*/
+        height: 30px;
+        background-color: #252525af;
+        padding: 5px;
+        border-bottom: 1px solid #ffffff9d;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        color: #fff;
+        letter-spacing: 2px;
+        font-size: 0.9rem;
+        font-weight: 700;
+    }
+    .Show_this_moment_stats{
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        margin-top: 0;
+    }
+}
